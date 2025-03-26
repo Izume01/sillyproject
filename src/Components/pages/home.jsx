@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Popups from "../component/popup";
+import Bdos from "../component/bdos";
 
 export default function Home() {
   const data = [
@@ -105,6 +107,13 @@ export default function Home() {
         </div>
 
       )}
+
+
+      {clickCount > 6 && <Popups />}
+      {clickCount > 12 &&  <Popups />}
+      {clickCount > 24 && 
+        <Bdos/>
+      }
     </div>
   );
 }
